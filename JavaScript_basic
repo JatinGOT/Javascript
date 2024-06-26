@@ -1,1 +1,681 @@
+Basic Concept like 
+1) Variable
+var a = 5;
+// const b = 7;
+//  b=8;
+
+console.log(typeof a);
+
+let b = 66;
+console.log(b);
+
+const item = {
+    name : "Led Bulb",
+    price : "150"
+}
+console.log(item);
+
+john = {fN : "Jatin" , LN : " Kumar"}
+billy = {
+    fN : " Hello",
+    LN : " Wirkd"
+}
+console.log(john.fN);
+console.log(billy.fN);
+// alert("Hwell==fds")
+
+
+// test = confirm("Hello")
+// if(test == true){
+//     console.log("Your ");
+// }
+// else{
+// console.log("No");
+// }
+
+console.log(null == undefined); 
+console.log(null === undefined);  
+console.log(typeof null );  
+
+
+console.log(isNaN(NaN))
+
+
+
+// variable
+
+// // var 
+// let x = "Katom"
+// x = "let"
+// console.log(x);
+// // let 
+
+// // const 
+// const aa = 5;
+// // aa = 6;
+// console.log(aa);
+
+
+// Data Types
+
+//NUmber
+// let num = 5;
+// console.log(typeof num); 
+// // String 
+// let str = "jatin"
+// console.log(typeof str);
+// // boolean
+// let bool = true
+// console.log(typeof bool);
+// // null
+// let NU = null; // these is the error in JS that Null is a primitive data type but its type is object that is the non primitive data type 
+// console.log(typeof NU );
+
+// // undefined 
+// let un
+// console.log(typeof un);
+
+
+
+// Implicit type conversion  in js 
+// let v = "3" - 6;
+
+//  if string minus with number the data type will change into number 
+// let v = 3 + 
+// console.log(v);
+// console.log(typeof v);
+
+// Explicit Type converion in js 
+// let v  = "4"+4
+let v = 20.2;
+console.log(parseFloat(v));
+console.log(v);
+console.log(typeof Number(v));
+// console.log(v+5 );
+
+
+//--------------------------------------------------------------------
+
+2) String
+console.log("String javascript");
+let name = "Jatin"
+console.log(name.length); 
+console.log(name.toUpperCase())
+
+let names = "keshav";
+console.log(names.length);
+
+// console.log(names.anchor());
+// console.log(names.big());
+// console.log(names.blink());
+
+// console.log(name.charAt(0));
+// console.log(name.charCodeAt(1));
+// console.log(name.charPointAt(0));
+// console.log(name.concat("04"));
+
+const a = new String("Hello world"); // a === "Hello world" is false
+const b = String("Hello world"); // b === "Hello world" is true
+let c = b==="Hello world"
+// console.log(c);
+a instanceof String; // is true
+b instanceof String; // is false
+typeof a; // "object"
+typeof b; // "string"
+
+// console.log(name.endsWith('n'));
+
+//reversing a string 
+let rev = "Jatin";
+console.log(rev.split('').reverse().join(''));
+let k = ["jatin"]
+console.log(k.);
+------------------------------------------------------------------------------------------
+3)Maths 
+const score = 400
+console.log(score);
+const balance = new Number(100)
+console.log(balance);
+
+console.log(balance.toString().length);
+console.log(balance.toFixed(1));
+
+const otherNumber = 23.2453;
+console.log(otherNumber.toPrecision(2));
+
+const h = 1000000;
+console.log(h.toLocaleString('en-IN'));
+
+Number.MAX_VALUE
+Number.MIN_VALUE
+
+// Maths 
+
+console.log(Math);
+console.log(Math.abs(-4)); // only negatives value will convert to positive 
+
+console.log(Math.round(4.3)); // round off
+console.log(Math.ceil(4.2));
+console.log(Math.floor(4.2));
+console.log(Math.sqrt(9));
+console.log(Math.max(4,5,6,8,5,2,0));
+
+
+console.log((Math.random()*10)+1);
+console.log((Math.floor(Math.random()*10))+1);
+
+const min = 10;
+const max = 20 
+
+console.log(Math.floor(Math.random()*(max-min+1)+min)); 
+
+
+----------------------------------------------------------------------------
+4) Loops 
+console.log("Loops in Javascript ");
+
+let a = 10;
+for (let i = 1; i <= a; i++) {
+    console.log(i);
+}
+
+console.log("-------------------------------");
+let i = 1;
+while (i <= a) {
+    console.log(i);
+    i++;
+}
+
+console.log("-------------------------------");
+
+let k = 1;
+do {
+    console.log(k);
+    k++;
+}
+while (k <= a);
+
+
+console.log("For in loop");
+const person = { fname: "John", lname: "Doe", age: 25 };
+let txt = "";
+for (let x in person) {
+    txt += person[x]+" ";
+
+}
+console.log(txt+" ");
+
+------------------------------------------------------------------
+
+
+5) Arrays 
+let name = ["John","Cena","Hello"]
+console.log(name.slice(0,2));
+console.log(name.splice(0,));
+// console.log(name);
+// console.log(name.length);
+
+// push value 
+// console.log(name.push("peelu"));
+// unshift
+// console.log(name.unshift("peelu"));
+// console.log(name.pop());
+
+// Splice 
+// console.log(name.splice(1,0,"kane"));
+// console.log(name.reverse());
+
+
+// For each in array 
+
+ let a = name.map((val,ind,arr)=>{
+    // console.log(`Value of Array ${val} and index of it ${ind} and elements are ${arr}`);
+
+return val
+
+
+});
+
+console.log(a);
+
+// Adding 2 element or array 
+let num = ["Jatin"];
+let num2 = ["kumar"];
+console.log(num.concat(num2));
+// console.log(num.concat("04"));
+
+let str = "zads";
+
+console.log(str.split('').sort().join(" "));
+
+//  for of and for in loop 
+
+// let f = ["Jatin",45,true]
+// for(let i in f){
+//     console.log(f[i]);
+// }
+// for(let i of f){
+//     console.log(i);
+// }
+
+// Mulitidimensional Array 
+let array = [
+    ["Jatin","Kumar"],
+    ["Jatin","Kumar"]
+]
+for(let i of array){
+    for(let j of i){
+        console.log(j);
+    }
+}
+
+// Copy And SPREAD 
+let x = ["Thomas","Chad"]
+// let b = x.slice(0);
+let b = [...x];
+
+// let[item1,item2] = b;
+
+b.push("rad")
+x.push("s","d")
+// console.log(item1,item2);
+console.log(x);
+console.log(b);
+
+
+
+// Array Destructing 
+let array1 = ["Thodmaa","dalhflds","radhe"]
+let [item1,item2,...item3] = array1;
+console.log(item1 , item2,item3);
+console.log(array1);
+
+-----------------------------------------------------------------------------------
+6) Objects
+// Objects in javascript 
+let obj  = {
+    "name hello"  : "Jatin",
+    func : function(){
+        console.log("Jatin");
+    },
+    
+    arr:[20,30,40]
+}
+// obj.func();
+// console.log(obj.func);
+
+// for(let i in obj){
+//     console.log(obj[i]);
+// }
+// for (let i of Object.keys(obj)) {
+//     console.log(obj[i]);
+    
+// }
+// console.log(obj["name hello"]);
+
+
+
+// Objects inside array 
+let arr  = [
+    {user:1,name:"Tate"},
+    {user:2,name:"Chad"},
+    {user:3,name:"Shelby"}
+
+]
+console.log(arr);
+for(let i of arr){
+    console.log(i);
+}
+let [item1,item2] = arr;
+console.log(item1);
+console.log(item2);
+
+let [{name}, ,{name:name1}] = arr;
+
+console.log(name);
+// console.log(item2);
+console.log(name1);
+
+
+
+// Function inside function 
+
+// function fun(){
+//     console.log("I am function");
+//     function fun2(){
+//         console.log("i m inside the function ");
+//     }
+//     fun2();
+// }
+// fun();
+
+// Lexical Scope 
+function fun(){
+    var a = 1;// it gives error if a is not declared 
+    console.log("This is function "+a);
+    function fun2(){
+        var a = 2;
+        console.log("This is function :"+a);
+    }
+    fun2();
+}
+fun();
+
+// sets 
+//  it contain only unique values 
+const arrsss=[10,20,30,4,50];
+console.log(arrsss);
+const s = new Set([10,20,20,30]);
+s.add(60);
+s.add("add")
+console.log(s);
+
+// finding length in sets
+ length = 0;
+ for (let ele of s) {
+    length++;
+ }
+ console.log(length);
+
+//  Maps 
+var map1 = new Map([[[1,"one"],
+"fName","Mickey"],
+["Whole Number ",[0,1,2,3,4]]])
+// console.log(map1.get("1"));
+console.log(map1.set("lname","Mouse"));
+console.log(map1);
+
+// Iterating Keys of Maps 
+let k= map1.keys();
+for(let key of k ){
+    console.log(key);
+}
+
+// this Keywords 
+
+var obj5 ={
+    fname: "jatin",
+    fun:function(){
+        console.log(this.fname);
+    }
+}
+obj5.fun();
+
+function func5(){
+    console.log(this);
+}
+func5();
+
+// new Keyword 
+// JavaScript new keyword is used to create an instance of an object that has a constructor function.
+
+function Fruit(color , taste , seeds){
+    this.color = color;
+    this. taste = taste;
+    this.seeds = seeds;
+}
+
+const fruit = new Fruit("Yellow","Sweet",1);
+console.log(fruit.color);
+
+function f(){
+    let c = 1;
+    this.a = 100;
+}
+// Set the function prototype 
+f.prototype.b = 200;
+let obj32 = new f();
+console.log(obj32.a);
+console.log(obj32.b);
+
+7) Functions 
+console.log("Java Script Function ");
+function noice(Name) {
+    console.log(`Function Returns ${Name} value `);
+}
+noice("Hello");
+
+
+function sum(a, b) {
+    let c = a + b;
+    console.log(`Sum of two digits : is ${c}`);
+}
+sum(5, 6);
+sum(5, 16);
+sum(115, 6);
+
+
+console.log("Arrow Function");
+const func = (x) => {
+    console.log("Function " + x);
+}
+func(45);
+func(405);
+func(445);
+
+
+// Nested funtions are possible in javascript and the same rules apply 
+
+// function name(fNAME) {
+ 
+//     function lastName() {
+//         console.log(`  The first Name ${name("Jatin")} `);
+//     }
+// }
+// console.log(lastName("Jatin"));
+
+
+
+
+// Anonymous Function 
+let fun = function(){
+    console.log("Hello");
+}
+fun();
+
+// Self Invoke
+( function(){
+    console.log("Hello");
+})();
+
+let str = "Jatin"
+console.log(str.split('').reverse().join(''));
+
+// Array function using for Each 
+// let arr = [10,20,30,40];
+// arr.forEach((Element) =>{
+//     console.log(Element);
+// });
+// console.log(arr);
+
+// split and join using function 
+let arr = "jatin,kumar"
+let a = arr.split(',');
+a.forEach((Element)=>{
+console.log(Element);
+});
+console.log(a);
+let jo = a.join(',');
+console.log(jo);
+
+8) If Else 
+console.log("If else conditions ");
+let age = 45;
+ if (age>18) {
+    console.log("You are adult");
+ } else {
+    console.log("You are not adult");
+    
+ }
+//  Repl : read evaluate print loop
+//  "3"==3 -- true
+//  "3" ===3 -- false : check type and value both 
+//  3 ===3 -- true 
+// 
+
+
+// Ternory Operator 
+let a = 6;
+let b = 8; 
+c =  a>b?(a-b):(b-a);
+console.log(c);
+
+
+ 
+9) Proto and Prototype 
+
+10) Aschronous, set time out , call back , call back hell , promise , await 
+// SetTimeOut
+// ----------------------------------------
+// console.log("This");
+// setTimeout(()=>{
+//     console.log("Asynchronous");
+
+// },3000)
+// console.log("is");
+
+
+// function fun(){
+//     console.log("Hello");
+// }
+// setTimeout(fun,2000);
+
+// ------------------------------------
+// Call Back
+// function f(val){
+// console.log(val);
+// }
+// function add(a,b,callback){
+//     let sum =a+b;
+//     callback(sum);
+// }
+// add(5,10,f);
+
+
+// ------------------------------------
+// Call Back hell
+function loadingData(callback) {
+    setTimeout(() => {
+
+        console.log("1) Loading Data....");
+        callback();
+    }, 2000)
+}2
+function collectingData(callback) {
+    setTimeout(() => {
+        console.log("2) Collecting Data....");
+        callback();
+
+    },2000)
+}
+function approvingData(callback) {
+    setTimeout(() => {
+        console.log("3) Approving Data....");
+        callback();
+
+    },1000)
+}
+function approved() {
+        console.log("4) Approved");
+}
+loadingData(function () {
+
+    collectingData(function(){
+
+        approvingData(function(){
+
+            approved();
+        });
+    });
+})
+
+// Promise 
+// Promise
+function fun(task) {
+    return new Promise((resolve, reject) => {
+        if (task) {
+            resolve("Completed")
+        }
+        else {
+            reject("not Completed")
+        }
+    })
+}
+
+let onResolve = (res) => {
+    console.log(res);
+}
+let onReject = (err) => {
+    console.log(err);
+}
+fun(true).then(onResolve).catch(onReject);
+
+
+// Call back hell problem solve by promise 
+
+function loadingData() {
+
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+
+            console.log("1) Loading Data....");
+            resolve();
+        }, 2000)
+    })
+}
+function collectingData() {
+    return new Promise((resolve,reject)=>{
+
+    setTimeout(() => {
+        console.log("2) Collecting Data....");
+        resolve();
+    }, 2000)
+})}
+function approvingData() {
+    return new Promise((resolve,reject)=>{
+
+    setTimeout(() => {
+        console.log("3) Approving Data....");
+        // reject("Error:Not Fullfilled");
+        resolve();
+
+    }, 1000)
+})}
+function approved() {
+    console.log("4) Approved");
+}
+
+// call back Hell -- when we do lots callback one by one in function that called call back
+// loadingData(function () {
+
+//     collectingData(function(){
+
+//         approvingData(function(){
+
+//             approved();
+//         });
+//     });
+// })
+// loadingData().then(collectingData).then(approvingData).then(approved).catch((err)=>{
+//     console.log(err);
+// })
+
+
+
+// Async await
+async function Ex(){
+    await loadingData();
+    // await collectingData();
+    await approvingData();
+    await approved();
+    
+}
+Ex().then(collectingData).catch((err)=>{
+    console.log(err);
+})
+
+
+
+
 
